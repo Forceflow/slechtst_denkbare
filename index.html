@@ -4,12 +4,14 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <head>
 <title>Slechtst Denkbare</title>
-<script src="jquery-latest.min.js" type="text/javascript"></script>
-<script src="jquery.shuffleLetters.js"></script>
-<script src="slechtst_denkbare.js" type="text/javascript"></script>
+<script src="js/jquery-latest.min.js" type="text/javascript"></script>
+<script src="js/jquery.shuffleLetters.js"></script>
+<script src="js/slechtst_denkbare.js" type="text/javascript"></script>
 </head>
 <body onload="loadFile(f_lines, a_lines, b_lines)">
-<div align="center"><h1 id="content"></h1></div>
-<button onClick="printRandom()">Test</button>
+<div id="fullcontent">
+   <div align="center"><h1 id="content"></h1></div>
+   <div algin="center"><button onClick="printRandom()">Test</button></div>
+</div>
 </body>
 </html>
