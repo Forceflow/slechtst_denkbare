@@ -8,10 +8,17 @@
 <script src="js/jquery.shuffleLetters.js"></script>
 <script src="js/slechtst_denkbare.js" type="text/javascript"></script>
 </head>
-<body onload="loadFile(f_lines, a_lines, b_lines)">
-<div id="fullcontent">
-   <div align="center"><h1 id="content"></h1></div>
-   <div algin="center"><button onClick="printRandom()">Test</button></div>
+<body onload="loadFile(f_lines, lines)">
+<div id="wrapper">
+	<div id="header" align="center"></div>
+	<div id="thecontent" align="center">
+			<div align="center"><h1 id="content"></h1></div>
+			<div align="center"></div>
+			<div algin="center"><button onClick="printRandom()">Test</button></div>
+	</div>
+	<div id="footer" align="center">
+			<div align="center"><p id="status">Status</p></div>
+	</div>
 </div>
 </body>
 </html>

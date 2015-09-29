@@ -1,9 +1,10 @@
 var f_lines = 'slechtst_denkbare.txt';
-var a_lines = [];
-var b_lines = [];
-var b_beroepen = [];
+var lines = [];
+var done_lines = [];
 
-function loadFile(file, array, boolean_array){
+var n_lines;
+
+function loadFile(file, array){
 	var txtFile = new XMLHttpRequest();
 	txtFile.open("GET", file, true);
 	txtFile.onreadystatechange = function()
@@ -14,42 +15,29 @@ function loadFile(file, array, boolean_array){
 			{  // file is found
 				allText = txtFile.responseText; 
 				lines = txtFile.responseText.split("\n");
-				var n_lines = lines.length;
+				n_lines = lines.length;
 				for (var i = 0; i < n_lines; i++)
 				{
 					array.push(lines[i]);
 					console.log(lines[i]);
 				}
-				for (var i = 0; i < n_lines; i++)
-				{
-					boolean_array.push(0);
-				}
+				updateStatus();
 			}
 		}
     } 
 	txtFile.send(null);
 }
 
-function isArrayFull(array){
-	var sum = 0;
-	for (var i = 0; i < array.length; i++) 
-	{
-		sum += array[i];
-	}
-	return sum == array.length;
+function printRandom(){
+	var id = Math.floor(Math.random() * lines.length);
+	document.getElementById("content").innerHTML=lines[id];
+	$("#content").shuffleLetters();
+	done_lines.push(lines.splice(id,1));
+	updateStatus();
 }
 
-
-function printRandom()
-{
-	if(isArrayFull(b_lines)){
-		console.log("No more lines ..");
-		return;
-	}
-	do {
-		var id = Math.floor(Math.random() * a_lines.length);
-	} while (b_lines[id] != 0)
-	document.getElementById("content").innerHTML=a_lines[id];
-	$("#content").shuffleLetters();
-	b_lines[id] = 1;
+function updateStatus(){
+	var loaded = n_lines;
+	var available = lines.length;
+	document.getElementById("status").innerHTML="Loaded " + loaded + ", available " + available;
 }
