@@ -2,11 +2,28 @@ var f_lines = 'slechtst_denkbare.txt';
 var lines = [];
 var done_lines = [];
 
-var n_lines;
+var started_from_local_storage;
 
 String.prototype.isEmpty = function() {
     return (this.length === 0 || !this.trim());
 };
+
+function saveLinesToStorage(){
+	localStorage["lines"] = JSON.stringify(lines);
+	localStorage["done_lines"] = JSON.stringify(done_lines);
+}
+
+function loadLinesFromStorage(){
+	if (localStorage["lines"] == null){
+		return false;
+	}
+	if (localStorage["done_lines"] == null){
+		return false;
+	}
+	lines = JSON.parse(localStorage["lines"]);
+	done_lines = JSON.parse(localStorage["done_lines"]);
+	return true;
+}
 
 function hideImage(){
 	document.getElementById("image").src='';
@@ -30,6 +47,14 @@ function show(text, image){
 
 function loadFile(file, array)
 {
+	if (loadLinesFromStorage()){
+		console.log("Found local storage.")
+		started_from_local_storage = true;
+		welcome();
+		return;
+	}
+	console.log("Found no local storage, loaded from file.")
+	started_from_local_storage = false;
 	var txtFile = new XMLHttpRequest();
 	txtFile.open("GET", file, true);
 	txtFile.onreadystatechange = function()
@@ -45,8 +70,8 @@ function loadFile(file, array)
 				{
 					array.push(lines[i].trim());
 				}
-				updateStatus();
-				show("Welkom op de slechtst denkbare impro-avond");
+				welcome();
+				saveLinesToStorage();
 			}
 		}
     } 
@@ -56,27 +81,48 @@ function loadFile(file, array)
 function printRandom()
 {
 	hideImage();
-	if(lines.length == 0){error("DE SUGGESTIES ZIJN OP, LULLO");return;}
+	if(lines.length == 0)
+	{
+		error("DE SUGGESTIES ZIJN OP, LULLO");
+		return;
+	}
 	var id = Math.floor(Math.random() * lines.length);
 	var splitted = lines[id].split("$");
-	if(splitted.length == 1 || splitted[1].isEmpty()){
+	if(splitted.length == 1 || splitted[1].isEmpty())
+	{
 		show(splitted[0]);
 	}
-	else{
+	else
+	{
 		show(splitted[0], splitted[1]);
 	}
 	done_lines.push(lines.splice(id,1));
 	updateStatus();
+	saveLinesToStorage();
 }
 
 function updateStatus()
 {
-	var loaded = n_lines;
+	var total = lines.length + done_lines.length;
 	var available = lines.length;
-	document.getElementById("status").innerHTML="Loaded " + loaded + ", available " + available;
+	var status = "Total " + total + ", available " + available + " ";
+	if(started_from_local_storage)
+	{
+		status+="from local storage."
+	}
+	else 
+	{
+		status+="from file."
+	}
+	document.getElementById("status").innerHTML=status;
 }
 
-function error(text){
-	show(text, 'error.jpg');
-	
+function welcome(){
+	show("Welkom op de slechtst denkbare impro-avond",'affiche.jpg');
+	updateStatus();
+}
+
+function error(text)
+{
+	show(text,'error.jpg');
 }
