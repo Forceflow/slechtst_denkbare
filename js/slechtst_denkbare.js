@@ -118,7 +118,7 @@ function updateStatus()
 }
 
 function welcome(){
-	show("Welkom op de slechtst denkbare impro-avond",'affiche.jpg');
+	show("Cafe The Joker Slechtst Denkbare Impro-app",'');
 	updateStatus();
 }
 
