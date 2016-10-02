@@ -127,7 +127,7 @@ function updateStatus()
 }
 
 function welcome(){
-	show("Rudy De Slechtst Denkbare Robot",'');
+	show("WELKOM");
 	updateStatus();
 }
 
