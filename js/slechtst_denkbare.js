@@ -127,8 +127,15 @@ function updateStatus()
 }
 
 function welcome(){
-	show("WELKOM");
+	show("Slechtst Denkbare App");
 	updateStatus();
+}
+
+function resetApp(){
+	localStorage.clear();
+	loadFile(f_lines, lines);
+	updateStatus();
+	welcome();
 }
 
 function error(text)
