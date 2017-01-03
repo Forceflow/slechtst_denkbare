@@ -2,6 +2,10 @@ var f_lines = 'slechtst_denkbare.txt';
 var lines = [];
 var done_lines = [];
 
+// Configure how often the public shoud be asked for input
+var counter = 1; // put this to 0 to start with public input
+var public_interval = 4; // how many cards until public input
+
 var started_from_local_storage;
 
 String.prototype.isEmpty = function() {
@@ -81,22 +85,27 @@ function loadFile(file, array)
 function printRandom()
 {
 	hideImage();
-	if(lines.length == 0)
-	{
-		error("DE SUGGESTIES ZIJN OP, LULLO");
-		return;
+	if(counter % public_interval != 0){
+		if(lines.length == 0)
+		{
+			error("DE SUGGESTIES ZIJN OP, LULLO");
+			return;
+		}
+		var id = Math.floor(Math.random() * lines.length);
+		var splitted = lines[id].split("$");
+		if(splitted.length == 1 || splitted[1].isEmpty())
+		{
+			show(splitted[0]);
+		}
+		else
+		{
+			show(splitted[0], splitted[1]);
+		}
+		done_lines.push(lines.splice(id,1));
+	} else {
+		show("Slechtst denkbare ... (iets uit het publiek)");
 	}
-	var id = Math.floor(Math.random() * lines.length);
-	var splitted = lines[id].split("$");
-	if(splitted.length == 1 || splitted[1].isEmpty())
-	{
-		show(splitted[0]);
-	}
-	else
-	{
-		show(splitted[0], splitted[1]);
-	}
-	done_lines.push(lines.splice(id,1));
+	counter++;
 	updateStatus();
 	saveLinesToStorage();
 }
@@ -118,8 +127,15 @@ function updateStatus()
 }
 
 function welcome(){
-	show("Cafe The Joker Slechtst Denkbare Impro-app",'');
+	show("Slechtst Denkbare App");
 	updateStatus();
+}
+
+function resetApp(){
+	localStorage.clear();
+	loadFile(f_lines, lines);
+	updateStatus();
+	welcome();
 }
 
 function error(text)
