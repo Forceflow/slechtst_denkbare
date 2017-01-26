@@ -142,3 +142,11 @@ function error(text)
 {
 	show(text,'error.jpg');
 }
+
+$(window).keypress(function(e) {
+    if (e.which === 32) {
+
+        printRandom();
+
+    }
+});
