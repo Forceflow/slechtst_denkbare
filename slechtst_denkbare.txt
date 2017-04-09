@@ -18,29 +18,27 @@ Dingen die je niet vaak zal horen in een cursus EHBO$
 Dingen die je niet vaak zal horen in Mordor$mordor.jpg
 Dingen die je niet vaak zal horen in de Gazastrook$gaza.jpg
 Dingen die je niet vaak zal horen in een dansstudio$
-Dingen die je niet vaak zal horen in/op een reuzenrad$
+Dingen die je niet vaak zal horen in een reuzenrad$
 Dingen die je niet vaak zal horen op een golfterrein$
 Dingen die je niet vaak zal horen in een vluchtelingenkamp$vluchtelingen.jpg
 Dingen die je niet vaak zal horen in de gaskamers in Auschwitz$gaskamer.jpg
-Dingen die je niet vaak zal horen in de Deathstar$deathstar.jpg
+Dingen die je niet vaak zal horen in de Death Star$deathstar.jpg
 Dingen die je niet vaak zal horen in een dierenwinkel$
 Dingen die je niet vaak zal horen in een interview met een profvoetballer$
 Dingen die je niet vaak zal horen op het History Channel$
-Dingen die je niet vaak zal horen bij een bekentenis van Poetin$poetin.jpg
-Dingen die je niet vaak zal horen in kinderporno$
-Dingen die je niet vaak zal horen in een hoerenkot$bordeel.jpg
-Dingen die je niet vaak zal horen bij het vaticaans concilie$
-Dingen die je niet vaak zal horen bij een rockfestival$
-Dingen die je niet vaak zal horen in een backstage voor comedians$
+Dingen die je niet vaak zal horen in een bordeel$bordeel.jpg
+Dingen die je niet vaak zal horen bij het Vaticaans Concilie$
+Dingen die je niet vaak zal horen op een rockfestival$
+Dingen die je niet vaak zal horen in een backstage$
 Dingen die je niet vaak zal horen in/bij een illegale boksmatch$
 Dingen die je niet vaak zal horen bij een drugsdeal$
 Dingen die je niet vaak zal horen in een liefdeslied$
-Dingen die je niet vaak zal horen in een shakespearestuk$
+Dingen die je niet vaak zal horen in een Shakespeare-stuk$
 Dingen die je niet vaak zal horen in een ruimtestation$iss.jpg
 Dingen die je niet vaak zal horen in een creche$
 Dingen die je niet vaak zal horen bij McDonalds$mcdonalds
 Dingen die je niet vaak zal horen in een opera$opera.jpg
-Dingen die je niet vaak zal horen in de bijbel$bijbel.jpg
+Dingen die je niet vaak zal horen in de Bijbel$bijbel.jpg
 Dingen die je niet vaak zal horen in het weerbericht$
 Dingen die je niet vaak zal horen bij het WK voetbal$
 Dingen die je niet vaak zal horen in een rampenfilm$disaster.jpg
@@ -64,9 +62,8 @@ Slechtst Denkbare Slogan/Titel voor Artsen Zonder Grenzen$azg.jpg
 Slechtst Denkbare Slogan/Titel voor shampoo$
 Slechtst Denkbare Slogan/Titel voor een kinderdagverblijf$
 Slechtst Denkbare Slogan/Titel voor het internet$
-Slechtst Denkbare Slogan/Titel voor aids(remmers)$
+Slechtst Denkbare Slogan/Titel voor AIDS(remmers)$
 Slechtst Denkbare Slogan/Titel voor kunstschaatsen$kunstschaatsen.jpg
-Slechtst Denkbare Slogan/Titel voor pedofilie$
 Slechtst Denkbare Slogan/Titel voor een brandwondencentrum$brandwondencentrum.jpg
 Slechtst Denkbare Slogan/Titel voor de zelfmoordlijn$zelfmoordlijn.jpg
 Slechtst Denkbare Slogan/Titel voor het Rode Kruis$
@@ -76,7 +73,7 @@ Slechtst Denkbare Slogan/Titel voor bier$
 Slechtst Denkbare Slogan/Titel voor een universiteit$
 Slechtst Denkbare Slogan/Titel voor een bejaardentehuis$bejaardentehuis.jpg
 Slechtst Denkbare Slogan/Titel voor een dating site$
-Slechtst Denkbare Slogan/Titel voor fitnessclub$
+Slechtst Denkbare Slogan/Titel voor een fitnessclub$
 Slechtst Denkbare manier om iemand te vertellen dat een familielid overleden is$
 Slechtst Denkbare manier om vuurwerk af te steken$
 Slechtst Denkbare manier om je huis te beveiligen$
@@ -92,22 +89,21 @@ Slechtst Denkbare manier om een rijexamen af te leggen$
 Slechtst Denkbare manier om een nieuw gebouw in te huldigen$
 Slechtst Denkbare manier om in een nieuw huis in te trekken$
 Slechtst Denkbare manier om seksuele voorlichting te geven$
-Slechtst Denkbare manier om aanzoek te doen$
-Slechtst Denkbare manier om baby in slaap te wiegen$
-Slechtst Denkbare manier om champagnefles te openen$
-Slechtst Denkbare manier om duivel uit te drijven$exorcist.jpg
+Slechtst Denkbare manier om een (huwelijks)aanzoek te doen$
+Slechtst Denkbare manier om te babysitten$
+Slechtst Denkbare manier om een champagnefles te openen$
+Slechtst Denkbare manier om de duivel uit te drijven$exorcist.jpg
 Slechtst Denkbare manier om de eerste keer seks te hebben$
-Slechtst Denkbare manier om aan filosofie te doen$
+Slechtst Denkbare manier om te filosoferen$
 Slechtst Denkbare manier om de hik te stoppen$
 Slechtst Denkbare manier om klaar te komen$klaarkomen.jpg
 Slechtst Denkbare manier om vluchtelingen te helpen$vluchtelingen.jpg
 Slechtst Denkbare manier om appels te plukken$appels.jpg
 Slechtst Denkbare manier om je veters te knopen$
 Slechtst Denkbare manier om iemand te versieren aan een bar$
-Slechtst Denkbare manier om vast te zitten in een lift$
 Slechtst Denkbare manier om je handtekening te zetten$
 Slechtst Denkbare manier om een vriend met geheugenverlies te helpen$
-Slechtst Denkbare manier om drugs te kopen$
+Slechtst Denkbare manier om drugs te kopen / te verkopen$
 Slechtst Denkbare manier om de paus te verwelkomen$paus.jpg
 Slechtst Denkbare manier om naar de hoeren te gaan$
 Slechtst Denkbare manier om Stephen Hawking te begeleiden$hawking.jpg
@@ -116,13 +112,17 @@ Slechtst Denkbare manier om een sok aan te doen$
 Slechtst Denkbare manier om zelfdoding te voorkomen$
 Slechtst Denkbare manier om een condoom te gebruiken$condoom.jpg
 Slechtst Denkbare manier om te vechten$
+Slechtst Denkbare manier om een brand te blussen$
+Slechtst Denkbare manier om met een computer te werken$
 Slechtst Denkbare manier om een team te motiveren $
 Slechtst Denkbare manier om om een nieuwe leerling voor te stellen$
 Slechtst Denkbare manier om mensen te verwelkomen op een vliegtuig$
 Slechtst Denkbare manier om onder een snelheidsboete uit te lullen$
 Slechtst Denkbare manier om tegen den dokter te zeggen dat ge pijn hebt aan uw fluit$
+Slechtst Denkbare manier om te onderhandelen$
 Slechtst Denkbaar moment om in een weerwolf te veranderen$
 Slechtst Denkbaar moment om te masturberen$
+Slechtst Denkbaar moment om diarree te krijgen$
 Slechtst Denkbare manier om in de hemel te arriveren$
 Slechtst Denkbare zin om van een bergtop te schreeuwen$
 Slechtst Denkbare antwoord op -Ik Zie Je Graag-$
@@ -157,6 +157,9 @@ Slechtst Denkbare Tandarts$
 Slechtst Denkbare Vampier$
 Slechtst Denkbare Paus$paus.jpg
 Slechtst Denkbare Sportcommentator$
+Slechtst Denkbare Nieuwsanker$
+Slechtst Denkbare Touroperator$
+Slechtst Denkbare Marketeer$
 Slechtst Denkbare Operazanger$opera.jpg
 Slechtst Denkbare Cameraman$
 Slechtst Denkbare Advocaat$
@@ -170,11 +173,12 @@ Slechtst Denkbare Ice-road trucker$trucker.jpg
 Slechtst Denkbare Bakker$
 Slechtst Denkbare Naaister$
 Slechtst Denkbare Winkeldetective$
-Slechtst Denkbare aarderijkskundeleraar$
+Slechtst Denkbare private detective$
+Slechtst Denkbare aardrijkskundeleraar$
 Slechtst Denkbare chef (kok)$
 Slechtst Denkbare deurwaarder$
 Slechtst Denkbare engelbewaarder$
-Slechtst Denkbare Bond villain$blofeld.jpg
+Slechtst Denkbare Bond-slechterik$blofeld.jpg
 Slechtst Denkbare groentenboer$
 Slechtst Denkbare havenarbeider$
 Slechtst Denkbare imker$imker.jpg
@@ -187,6 +191,7 @@ Slechtst Denkbare stuntman$stuntman.jpg
 Slechtst Denkbare vrouwenhandelaar$
 Slechtst Denkbare wetenschapper$
 Slechtst Denkbare ober$
+Slechtst Denkbare conducteur$
 Slechtst Denkbare kerstman$santa.jpg
 Slechtst Denkbare rockster$
 Slechtst Denkbare orgaandonor$
@@ -207,13 +212,12 @@ Slechtst Denkbare ronde-tafelridder$
 Slechtst Denkbare Star Wars-figuur$
 Slechtst Denkbare sportleerkracht$
 Slechtst Denkbare schilder$
-Slechtst Denkbare excuus als je betrapt wordt tijdens het kijken van porno$internethusband.jpg
-Slechtst Denkbare schizofreen$
+Slechtst Denkbare excuus als je betrapt wordt tijdens porno kijken$internethusband.jpg
 Slechtst Denkbare GPS stem$
 Slechtst Denkbare superheld$
 Slechtst Denkbare pick up line$
 Slechtst Denkbare stervensbegeleider$
-Slechtst Denkbare songwriter$songwriter.jpg
+Slechtst Denkbare singer-songwriter$songwriter.jpg
 Slechtst Denkbare zin om te horen van je buurman$
 Slechtst Denkbare zelfmoordbrief$zelfmoordlijn.jpg
 Slechtst Denkbare openingszin$
@@ -225,6 +229,7 @@ Deleted Scenes uit The Godfather$
 Deleted Scenes uit The Lord Of The Rings$
 Dingen die je kan zeggen over je auto, maar niet over je vriendin$
 Dingen die je kan zeggen over je gsm, maar niet over je kinderen$
+Dingen die je kan zeggen over je huisdier, maar niet over je vrouw$
 Het antwoord is 'Bananen'. Wat is de vraag?$
 Het antwoord is '104 gram'. Wat is de vraag?$
 Het antwoord is '2.23 meter'. Wat is de vraag?$
