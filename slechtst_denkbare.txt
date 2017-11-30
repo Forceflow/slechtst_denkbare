@@ -1,3 +1,4 @@
+<slechtst_denkbare>
 Dingen die je niet vaak zal horen in een vliegtuig$
 Dingen die je niet vaak zal horen in een OCMW kantoor$
 Dingen die je niet vaak zal horen op het journaal$
@@ -245,3 +246,4 @@ Het antwoord is 'Een Amerikaanse eik' Wat is de vraag?$
 Het antwoord is 'Adolf Hitler' Wat is de vraag?$
 Het antwoord is 'De placenta, natuurlijk!' Wat is de vraag?$
 Het antwoord is 'In een pak boter' Wat is de vraag?$
+</slechtst_denkbare>
