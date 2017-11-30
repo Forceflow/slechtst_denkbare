@@ -3,8 +3,8 @@ var lines = [];
 var done_lines = [];
 
 // Configure how often the public shoud be asked for input
-var counter = 1; // put this to 0 to start with public input
-var public_interval = 4; // how many cards until public input
+var public_interval_counter = 1; // put this to 0 to start with public input
+var public_interval = 5; // how many cards until public input
 
 var started_from_local_storage;
 
@@ -49,43 +49,49 @@ function show(text, image){
 	$("#content").shuffleLetters({callback:function(){showimage(image);}});
 }
 
-function loadFile(file, array)
-{
+function start(){
+	// GET LINES
+	// Try local storage
 	if (loadLinesFromStorage()){
 		console.log("Found local storage.")
 		started_from_local_storage = true;
 		welcome();
 		return;
 	}
-	console.log("Found no local storage, loaded from file.")
-	started_from_local_storage = false;
-	var txtFile = new XMLHttpRequest();
-	txtFile.open("GET", file, true);
-	txtFile.onreadystatechange = function()
+	else // Try to load from file 
 	{
-		if (txtFile.readyState === 4) // document is ready to parse.
-		{  
-			if (txtFile.status === 200) // file is found
+		console.log("Found no local storage, trying to load from file.")
+		started_from_local_storage = false;
+		var txtFile = new XMLHttpRequest();
+		txtFile.open("GET", f_lines, true);
+		txtFile.onreadystatechange = function()
+		{
+			if (txtFile.readyState === 4) // document is ready to parse.
 			{  
-				allText = txtFile.responseText; 
-				lines = txtFile.responseText.split("\n");
-				n_lines = lines.length;
-				for (var i = 0; i < n_lines; i++)
-				{
-					array.push(lines[i].trim());
+				if (txtFile.status === 200) // file is found
+				{  
+					allText = txtFile.responseText; 
+					lines = txtFile.responseText.split("\n");
+					n_lines = lines.length;
+					for (var i = 0; i < n_lines; i++)
+					{
+						lines.push(lines[i].trim());	
+					}
+					lines = lines.slice(1,n_lines-1);
+					saveLinesToStorage();
+					welcome(); // only start welcome here, because ASYNC
+					return;
 				}
-				welcome();
-				saveLinesToStorage();
 			}
-		}
-    } 
-	txtFile.send(null);
+		} 
+		txtFile.send(null);
+	}
 }
 
 function printRandom()
 {
 	hideImage();
-	if(counter % public_interval != 0){
+	if(public_interval_counter % public_interval != 0){
 		if(lines.length == 0)
 		{
 			error("DE SUGGESTIES ZIJN OP, LULLO");
@@ -102,10 +108,12 @@ function printRandom()
 			show(splitted[0], splitted[1]);
 		}
 		done_lines.push(lines.splice(id,1));
-	} else {
+	} 
+	else 
+	{
 		show("Slechtst denkbare ... (iets uit het publiek)");
 	}
-	counter++;
+	public_interval_counter++;
 	updateStatus();
 	saveLinesToStorage();
 }
@@ -114,14 +122,14 @@ function updateStatus()
 {
 	var total = lines.length + done_lines.length;
 	var available = lines.length;
-	var status = "Total " + total + ", available " + available + " ";
+	var status = available + "/" + total + " ";
 	if(started_from_local_storage)
 	{
-		status+="from local storage."
+		status+="(L)"
 	}
 	else 
 	{
-		status+="from file."
+		status+="(F) "
 	}
 	document.getElementById("status").innerHTML=status;
 }
@@ -133,9 +141,13 @@ function welcome(){
 
 function resetApp(){
 	localStorage.clear();
-	loadFile(f_lines, lines);
-	updateStatus();
-	welcome();
+	lines = [];
+	done_lines = [];
+	start();
+}
+
+function setPublicInterval(){
+	
 }
 
 function error(text)
@@ -145,8 +157,6 @@ function error(text)
 
 $(window).keypress(function(e) {
     if (e.which === 32) {
-
         printRandom();
-
     }
 });
