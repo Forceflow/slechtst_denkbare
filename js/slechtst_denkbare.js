@@ -147,7 +147,8 @@ function resetApp(){
 }
 
 function setPublicInterval(){
-	
+	var input = prompt("Hoeveel items tussen elke vraag voor publieksinput?");
+	// validate input here, leave default if invalid
 }
 
 function error(text)
