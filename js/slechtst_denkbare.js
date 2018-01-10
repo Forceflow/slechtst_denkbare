@@ -147,8 +147,14 @@ function resetApp(){
 }
 
 function setPublicInterval(){
-	var input = prompt("Hoeveel items tussen elke vraag voor publieksinput?");
-	// validate input here, leave default if invalid
+	var input = prompt("Hoeveel items tussen elke vraag voor publieksinput?", public_interval);
+	var input_parsed = parseInt(input, 10);
+	if( (!Number.isInteger(input_parsed)) || input_parsed < 0 ){
+		console.log("Supplied number " + input_parsed + " is not an integer. Public interval stays at " + public_interval);
+		return;
+	}
+	console.log("Setting public interval to " + input_parsed);
+	public_interval = input_parsed;
 }
 
 function error(text)
