@@ -40,7 +40,7 @@ Dingen die je niet vaak zal horen in een ruimtestation$iss.jpg
 Dingen die je niet vaak zal horen in een creche$
 Dingen die je niet vaak zal horen bij McDonalds$mcdonalds
 Dingen die je niet vaak zal horen in een opera$opera.jpg
-Dingen die je niet vaak zal horen in de Bijbel$bijbel.jpg
+Dingen die je niet vaak zal lezen in de Bijbel$bijbel.jpg
 Dingen die je niet vaak zal horen in het weerbericht$
 Dingen die je niet vaak zal horen bij het WK voetbal$
 Dingen die je niet vaak zal horen in een rampenfilm$disaster.jpg
@@ -50,20 +50,16 @@ Dingen die je niet vaak zal horen in de lobby van een hotel$
 Dingen die je niet vaak zal horen in een laboratorium$labo.jpg
 Dingen die je niet vaak zal horen in een casino$
 Dingen die je niet vaak zal horen in een herdenkingsviering$
-Slechtst Denkbare Slogan/Titel voor Tandpasta$
-Slechtst Denkbare Slogan/Titel voor Een anti-drugscampagne$
-Slechtst Denkbare Slogan/Titel voor Een BOB-campagne$bob.jpg
-Slechtst Denkbare Slogan/Titel voor Ringland$
-Slechtst Denkbare Slogan/Titel voor een nieuw Harry Potter book$
-Slechtst Denkbare Slogan/Titel voor een valentijnskaart$valentijn.gif
-Slechtst Denkbare Slogan/Titel voor een condoleance-bericht$
-Slechtst Denkbare Slogan/Titel voor een begrafenisondernemer$
-Slechtst Denkbare Slogan/Titel voor een basisschool$
-Slechtst Denkbare Slogan/Titel voor medicijnen$medicijnen.jpg
-Slechtst Denkbare Slogan/Titel voor Artsen Zonder Grenzen$azg.jpg
-Slechtst Denkbare Slogan/Titel voor shampoo$
+Slechtst Denkbare slogan voor Tandpasta$
+Slechtst Denkbare slogan voor een anti-drugscampagne$
+Slechtst Denkbare slogan voor Een BOB-campagne$bob.jpg
+Slechtst Denkbare titel voor een nieuw Harry Potter book$
+Slechtst Denkbare valentijnskaart$valentijn.gif
+Slechtst Denkbare condoleance-bericht$
+Slechtst Denkbare slogan voor een begrafenisondernemer$
+Slechtst Denkbare slogan voor Artsen Zonder Grenzen$azg.jpg
+Slechtst Denkbare slogan voor shampoo$
 Slechtst Denkbare Slogan/Titel voor een kinderdagverblijf$
-Slechtst Denkbare Slogan/Titel voor het internet$
 Slechtst Denkbare Slogan/Titel voor AIDS(remmers)$
 Slechtst Denkbare Slogan/Titel voor kunstschaatsen$kunstschaatsen.jpg
 Slechtst Denkbare Slogan/Titel voor een brandwondencentrum$brandwondencentrum.jpg
@@ -120,7 +116,7 @@ Slechtst Denkbare manier om een team te motiveren $
 Slechtst Denkbare manier om om een nieuwe leerling voor te stellen$
 Slechtst Denkbare manier om mensen te verwelkomen op een vliegtuig$
 Slechtst Denkbare manier om onder een snelheidsboete uit te lullen$
-Slechtst Denkbare manier om tegen den dokter te zeggen dat ge pijn hebt aan uw fluit$
+Slechtst Denkbare manier om tegen een arts te zeggen dat je pijn hebt aan je penis$
 Slechtst Denkbare manier om te onderhandelen$
 Slechtst Denkbaar moment om in een weerwolf te veranderen$
 Slechtst Denkbaar moment om te masturberen$
@@ -190,7 +186,7 @@ Slechtst Denkbare matroos$matroos.jpg
 Slechtst Denkbare parkeerwachter$
 Slechtst Denkbare rode kruismedewerker$
 Slechtst Denkbare stuntman$stuntman.jpg
-Slechtst Denkbare vrouwenhandelaar$
+Slechtst Denkbare mensensmokkelaar$
 Slechtst Denkbare wetenschapper$
 Slechtst Denkbare ober$
 Slechtst Denkbare conducteur$
@@ -207,7 +203,7 @@ Slechtst Denkbare barman$
 Slechtst Denkbare radio dj$
 Slechtst Denkbare weerman$
 Slechtst Denkbare masturbatietechniek$
-Slechtst Denkbare U-boot bemanningslid$duikboot.jpg
+Slechtst Denkbare duikboot-bemanningslid$duikboot.jpg
 Slechtst Denkbare scheidsrechter/arbiter/grensrechter$
 Slechtst Denkbare model$
 Slechtst Denkbare ronde-tafelridder$
@@ -236,7 +232,6 @@ Het antwoord is 'Bananen'. Wat is de vraag?$
 Het antwoord is '104 gram'. Wat is de vraag?$
 Het antwoord is '2.23 meter'. Wat is de vraag?$
 Het antwoord is 'Vladimir Putin'. Wat is de vraag?$
-Het antwoord is 'Scharlakenrood'. Wat is de vraag?$
 Het antwoord is 'Een vuurpijl'. Wat is de vraag?$
 Het antwoord is 'Linkerbeen eerst'. Wat is de vraag?$
 Het antwoord is '2 kopen, 1 gratis'. Wat is de vraag?$
@@ -246,4 +241,19 @@ Het antwoord is 'Een Amerikaanse eik' Wat is de vraag?$
 Het antwoord is 'Adolf Hitler' Wat is de vraag?$
 Het antwoord is 'De placenta, natuurlijk!' Wat is de vraag?$
 Het antwoord is 'In een pak boter' Wat is de vraag?$
+Dingen die je niet gauw zal horen in het Witte Huis$
+Dingen die je best niet zegt op je eerste dag in het leger$
+Dingen die je niet gauw zal horen op het journaal$
+Dingen die je niet gauw zal horen op de uitreiking van de oscars$
+Slechtst denkbare manier om te helpen in een crisissituatie$
+Slechtst denkbare dingen om te zeggen in een rechtszaak$
+Dingen die je niet gauw zal horen in een Bond-film$
+Slechtst denkbare rij-examen$
+Dingen die je niet gauw zal horen in een wetenschapsprogramma$
+Dingen die je niet gauw zal zien op een verkeersbord$
+Dingen die je niet gauw zal horen op een quiz$
+Dingen die de sfeer bij een maaltijd meteen doen omslaan$
+Dingen die je niet zal horen/zien in een superheldenfilm$
+Slechtst denkbare sollicitatie$
+Dingen die je niet gauw zal horen/zien in een detectivereeks$
 </slechtst_denkbare>
