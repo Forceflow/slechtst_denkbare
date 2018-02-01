@@ -29,7 +29,6 @@ body {
 	bottom:0;
 	left:0;
 	font-weight:normal;
-	color:#000000;
 	letter-spacing:1pt;
 	word-spacing:2pt;
 	font-size:11px;
@@ -42,4 +41,12 @@ body {
 	display:none;
 }
 
-h1 { font-family: 'Raleway',sans-serif; font-size: 100px; font-weight: 800; line-height: 110px; margin: 0 0 24px; text-align: center; text-transform: uppercase; }
+#content { 
+	font-family: 'Raleway',sans-serif;
+	font-size: 100px;
+	font-weight: 800;
+	line-height: 110px;
+	margin: 0 0 24px;
+	text-align: center;
+	text-transform: uppercase; 
+}
