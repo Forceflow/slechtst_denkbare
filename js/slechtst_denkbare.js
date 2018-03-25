@@ -122,15 +122,8 @@ function updateStatus()
 {
 	var total = lines.length + done_lines.length;
 	var available = lines.length;
-	var status = available + "/" + total + " ";
-	if(started_from_local_storage)
-	{
-		status+="(L)"
-	}
-	else 
-	{
-		status+="(F) "
-	}
+	var status = "Cards:" + available + "/" + total + " - ";
+	status += "Interval:" + public_interval;
 	document.getElementById("status").innerHTML=status;
 }
 
