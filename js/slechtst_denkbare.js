@@ -44,6 +44,11 @@ function showimage(url){
 	}
 }
 
+function show(text){
+	document.getElementById("content").innerHTML=text;
+	$("#content").shuffleLetters();
+}
+
 function show(text, image){
 	document.getElementById("content").innerHTML=text;
 	$("#content").shuffleLetters({callback:function(){showimage(image);}});
@@ -99,14 +104,9 @@ function printRandom()
 		}
 		var id = Math.floor(Math.random() * lines.length);
 		var splitted = lines[id].split("$");
-		if(splitted.length == 1 || splitted[1].isEmpty())
-		{
-			show(splitted[0]);
-		}
-		else
-		{
-			show(splitted[0], splitted[1]);
-		}
+		//if(splitted.length == 1 || splitted[1].isEmpty()){
+		show(splitted[0]);
+		//}else{show(splitted[0], splitted[1]);}
 		done_lines.push(lines.splice(id,1));
 	} 
 	else 
