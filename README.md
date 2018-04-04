@@ -7,5 +7,5 @@ Now live at www.slechtstdenkbare.be
 
 # Todo:
 
-- Suggestieformulier
-- Responsive design
+- Better layout
+- Responsive design using Bootstrap
