@@ -158,6 +158,7 @@ function error(text)
 }
 
 $(window).keydown(function(e) {
+	e.stopPropagation();
     if (e.which === 32) {
         printRandom();
     }
