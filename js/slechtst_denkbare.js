@@ -150,7 +150,7 @@ function error(text) {
 	show(text, 'error.jpg');
 }
 
-$(window).keydown(function (e) {
+$(window).keyup(function (e) {
 	e.stopPropagation();
 	if (e.which === 32) {
 		printRandom();
