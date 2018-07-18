@@ -8,20 +8,20 @@ var public_interval = 5; // how many cards until public input
 
 var started_from_local_storage;
 
-String.prototype.isEmpty = function() {
-    return (this.length === 0 || !this.trim());
+String.prototype.isEmpty = function () {
+	return (this.length === 0 || !this.trim());
 };
 
-function saveLinesToStorage(){
+function saveLinesToStorage() {
 	localStorage["lines"] = JSON.stringify(lines);
 	localStorage["done_lines"] = JSON.stringify(done_lines);
 }
 
-function loadLinesFromStorage(){
-	if (localStorage["lines"] == null){
+function loadLinesFromStorage() {
+	if (localStorage["lines"] == null) {
 		return false;
 	}
-	if (localStorage["done_lines"] == null){
+	if (localStorage["done_lines"] == null) {
 		return false;
 	}
 	lines = JSON.parse(localStorage["lines"]);
@@ -29,35 +29,35 @@ function loadLinesFromStorage(){
 	return true;
 }
 
-function hideImage(){
-	document.getElementById("image").src='';
+function hideImage() {
+	document.getElementById("image").src = '';
 	document.getElementById("image").style.display = 'none';
 }
 
-function showimage(url){
+function showimage(url) {
 	if (url !== undefined) {
-		document.getElementById("image").src="img/"+url;
+		document.getElementById("image").src = "img/" + url;
 		document.getElementById("image").style.display = 'block';
 	}
-	else{
+	else {
 		hideImage();
 	}
 }
 
-function show(text){
-	document.getElementById("content").innerHTML=text;
+function show(text) {
+	document.getElementById("content").innerHTML = text;
 	$("#content").shuffleLetters();
 }
 
-function show(text, image){
-	document.getElementById("content").innerHTML=text;
-	$("#content").shuffleLetters({callback:function(){showimage(image);}});
+function show(text, image) {
+	document.getElementById("content").innerHTML = text;
+	$("#content").shuffleLetters({ callback: function () { showimage(image); } });
 }
 
-function start(){
+function start() {
 	// GET LINES
 	// Try local storage
-	if (loadLinesFromStorage()){
+	if (loadLinesFromStorage()) {
 		console.log("Found local storage.")
 		started_from_local_storage = true;
 		welcome();
@@ -69,36 +69,32 @@ function start(){
 		started_from_local_storage = false;
 		var txtFile = new XMLHttpRequest();
 		txtFile.open("GET", f_lines, true);
-		txtFile.onreadystatechange = function()
-		{
+		txtFile.onreadystatechange = function () {
 			if (txtFile.readyState === 4) // document is ready to parse.
-			{  
+			{
 				if (txtFile.status === 200) // file is found
-				{  
-					allText = txtFile.responseText; 
+				{
+					allText = txtFile.responseText;
 					lines = txtFile.responseText.split("\n");
 					n_lines = lines.length;
-					for (var i = 0; i < n_lines; i++)
-					{
-						lines.push(lines[i].trim());	
+					for (var i = 0; i < n_lines; i++) {
+						lines.push(lines[i].trim());
 					}
-					lines = lines.slice(1,n_lines-1);
+					lines = lines.slice(1, n_lines - 1);
 					saveLinesToStorage();
 					welcome(); // only start welcome here, because ASYNC
 					return;
 				}
 			}
-		} 
+		}
 		txtFile.send(null);
 	}
 }
 
-function printRandom()
-{
+function printRandom() {
 	hideImage();
-	if(public_interval_counter % public_interval != 0){
-		if(lines.length == 0)
-		{
+	if (public_interval_counter % public_interval != 0) {
+		if (lines.length == 0) {
 			error("DE SUGGESTIES ZIJN OP, LULLO");
 			return;
 		}
@@ -107,10 +103,9 @@ function printRandom()
 		//if(splitted.length == 1 || splitted[1].isEmpty()){
 		show(splitted[0]);
 		//}else{show(splitted[0], splitted[1]);}
-		done_lines.push(lines.splice(id,1));
-	} 
-	else 
-	{
+		done_lines.push(lines.splice(id, 1));
+	}
+	else {
 		show("Slechtst denkbare ... (iets uit het publiek)");
 	}
 	public_interval_counter++;
@@ -118,21 +113,20 @@ function printRandom()
 	saveLinesToStorage();
 }
 
-function updateStatus()
-{
+function updateStatus() {
 	var total = lines.length + done_lines.length;
 	var available = lines.length;
 	var status = "Cards:" + available + "/" + total + " - ";
 	status += "Interval:" + public_interval;
-	document.getElementById("status").innerHTML=status;
+	document.getElementById("status").innerHTML = status;
 }
 
-function welcome(){
+function welcome() {
 	show("Slechtst Denkbare App");
 	updateStatus();
 }
 
-function resetApp(){
+function resetApp() {
 	localStorage.clear();
 	lines = [];
 	done_lines = [];
@@ -141,10 +135,10 @@ function resetApp(){
 	start();
 }
 
-function setPublicInterval(){
+function setPublicInterval() {
 	var input = prompt("Hoeveel items tussen elke vraag voor publieksinput?", public_interval);
 	var input_parsed = parseInt(input, 10);
-	if( (!Number.isInteger(input_parsed)) || input_parsed < 0 ){
+	if ((!Number.isInteger(input_parsed)) || input_parsed < 0) {
 		console.log("Supplied number " + input_parsed + " is not an integer. Public interval stays at " + public_interval);
 		return;
 	}
@@ -152,14 +146,13 @@ function setPublicInterval(){
 	public_interval = input_parsed;
 }
 
-function error(text)
-{
-	show(text,'error.jpg');
+function error(text) {
+	show(text, 'error.jpg');
 }
 
-$(window).keydown(function(e) {
+$(window).keydown(function (e) {
 	e.stopPropagation();
-    if (e.which === 32) {
-        printRandom();
-    }
+	if (e.which === 32) {
+		printRandom();
+	}
 });
