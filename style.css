@@ -30,10 +30,13 @@ body {
 	display:none;
 }
 
-.suggestion-text-display { 
+h1, h2, h3, h4, h5, h6 {
 	/*font-family: 'Raleway',sans-serif;*/
-	font-size: 3.6em;
 	font-weight: 800;
+}
+
+.suggestion-text-display { 
+	font-size: 3.6em;
 	text-align: center;
 	text-transform: uppercase;
 	overflow-wrap: break-word;
