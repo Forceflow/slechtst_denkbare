@@ -158,11 +158,12 @@ function setPublicInterval() {
 }
 
 function getIntegerPublicInterval() {
-	value = parseInt(public_interval, 10);
+	var value = parseInt(public_interval, 10);
+	return value;
 }
 
 function decreasePublicInterval() {
-	public_interval = parseInt(public_interval, 10) - 1;
+	public_interval = getIntegerPublicInterval() - 1;
 	if (public_interval < 0) {
 		public_interval = 0;
 	}
@@ -171,7 +172,7 @@ function decreasePublicInterval() {
 }
 
 function increasePublicInterval() {
-	public_interval = parseInt(public_interval, 10) + 1;
+	public_interval = getIntegerPublicInterval() + 1;
 	if (public_interval > MAX_PUBLIC_INTERVAL) {
 		public_interval = MAX_PUBLIC_INTERVAL;
 	}
