@@ -116,8 +116,8 @@ function printRandom() {
 function updateStatus() {
 	var total = lines.length + done_lines.length;
 	var available = lines.length;
-	var status = "Cards: " + available + "/" + total;
-	var interval = "Interval: " + public_interval;
+	var status = available + "/" + total;
+	var interval = public_interval;
 	document.getElementById("status").innerHTML = status;
 	document.getElementById("interval").innerHTML = interval;
 }

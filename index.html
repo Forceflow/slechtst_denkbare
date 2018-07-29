@@ -62,35 +62,45 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Opties</h5>
+              <h2 class="modal-title" id="exampleModalLabel">Opties</h2>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
 
-              <div class="container">
+              <div class="container-fluid">
+
                 <div class="row">
-
-                  <!-- Gebruikte kaarten -->
-                  <div class="col-xs-12 col-md-8">
-                    <p id="status">Status</p>
-                  </div>
-                  <div class="col-xs-12 col-md-4">
-                    <button type="button" class="btn btn-primary btn-block" onClick="resetApp()">Reset gebruikte kaarten</button>
-                  </div>
-
+                  
                   <!-- Publieksinterval -->
-                  <div class="col-xs-12 col-md-8">
+                  <h3 class="col-md-12">
+                    Publieksinterval
+                  </h3>
+                  <div class="col-md-8">
                     <p id="interval">Interval</p>
                   </div>
-                  <div class="col-xs-12 col-md-2">
-                    <button type="button" class="btn btn-primary btn-block" onClick="setPublicInterval()">Zet publieksinterval</button>
+                  <div class="col-md-4">
+                    <button type="button" class="btn btn-primary btn-block" onClick="setPublicInterval()">Zet</button>
                   </div>
-                  <div align="center">
+
+                  <!-- Gebruikte kaarten -->
+                  <h3 class="col-md-12">
+                    Ongebruikte kaarten
+                  </h3>
+                  <div class="col-md-8">
+                    <p id="status">Status</p>
+                  </div>
+                  <div class="col-md-4">
+                    <button type="button" class="btn btn-primary btn-block" onClick="resetApp()">Reset</button>
+                  </div>
+
+
+                  <!-- Informatie -->
+                  <div class="col-md-12">
                     <p>
-                      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfMRoif8uh3CGwaXHmuRLflB6kYLQpwFVQp2WVeE8Y7cgVW3A/viewform?usp=sf_link" target="_blank">
-                        Suggest a card
+                      <a class="btn btn-primary btn-block" href="https://docs.google.com/forms/d/e/1FAIpQLSfMRoif8uh3CGwaXHmuRLflB6kYLQpwFVQp2WVeE8Y7cgVW3A/viewform?usp=sf_link" target="_blank">
+                        Suggereer een kaart
                       </a>
                     </p>
                     <p>
@@ -108,8 +118,7 @@
 
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Sluit</button>
             </div>
           </div>
         </div>
