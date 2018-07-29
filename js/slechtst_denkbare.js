@@ -135,12 +135,22 @@ function welcome() {
 	updateStatus();
 }
 
+// Not used anymore?
 function resetApp() {
 	localStorage.clear();
 	lines = [];
 	done_lines = [];
 	public_interval_counter = 1;
 	public_interval = 5;
+	start();
+}
+
+function resetCards() {
+	localStorage.removeItem("lines");
+	localStorage.removeItem("done_lines");
+	lines = [];
+	done_lines = [];
+	public_interval_counter = 1;
 	start();
 }
 
