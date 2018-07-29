@@ -38,7 +38,7 @@
     </script>
   </head>
   <body onload="start()">
-    <div class="container-fluid" id="wrapper">
+    <div class="container" id="wrapper">
   	 <div class="row" align="center"></div>
     	<div class="suggestion-display col-md-12" id="thecontent" align="center">
         <h1 class="suggestion-text-display" id="content"></h1>
@@ -49,12 +49,11 @@
 
     	<div class="footer">
   			<div class="container">
-          <div class="row button-container">
-            <div class="col-12">
-              <button type="button" class="btn btn-primary btn-lg bottom-button" onClick="printRandom()">
+          <div class="row justify-content-center">
+              <button type="button" class="col-8 col-sm-6 col-md-4 btn btn-primary btn-lg bottom-button" onClick="printRandom()">
                 <span class="fas fa-random"></span> 
               </button>
-              <button type="button" class="btn btn-secondary btn-lg bottom-button" data-toggle="modal" data-target="#exampleModal">
+              <button type="button" class="col-4 col-sm-3 col-md-2 btn btn-secondary btn-lg bottom-button" data-toggle="modal" data-target="#exampleModal">
                 <span class="fas fa-cog"></span>
               </button>
             </div>
@@ -101,14 +100,14 @@
                   <div class="col-8">
                     <p id="status">Status</p>
                   </div>
-                    <button type="button" class="col-2 btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="Reset alle gebruikte kaarten" onClick="resetCards()">
+                    <button type="button" class="col-2 btn btn-primary" data-toggle="tooltip" data-placement="top" title="Reset alle gebruikte kaarten" onClick="resetCards()">
                       <!-- Reset -->
                       <span class="fas fa-sync"></span> 
                     </button>
-                    <a class="col-2 btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="Suggereer een kaart" href="https://docs.google.com/forms/d/e/1FAIpQLSfMRoif8uh3CGwaXHmuRLflB6kYLQpwFVQp2WVeE8Y7cgVW3A/viewform?usp=sf_link" target="_blank">
+                    <!-- Suggereer een kaart -->
+                    <a class="col-2 btn btn-primary" data-toggle="tooltip" data-placement="top" title="Suggereer een kaart" href="https://docs.google.com/forms/d/e/1FAIpQLSfMRoif8uh3CGwaXHmuRLflB6kYLQpwFVQp2WVeE8Y7cgVW3A/viewform?usp=sf_link" target="_blank">
                       <span class="fas fa-lightbulb"></span> 
 
-                      <!-- Suggereer een kaart -->
                     </a>
 
                 </div>
@@ -118,13 +117,13 @@
 
             </div>
             <div class="modal-footer">
-                  <span class="credits">
-                    Made by Jeroen Baert
-                    <a class="btn btn-secondary btn-sm" href="https://github.com/Forceflow/slechtst_denkbare" target="_blank">
-                      <span class="fab fa-github"></span> 
-                    </a>
-                  </span>
-                  <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Sluit</button> -->
+              <span class="credits">
+                Made by Jeroen Baert
+                <a class="btn btn-secondary btn-sm" href="https://github.com/Forceflow/slechtst_denkbare" target="_blank">
+                  <span class="fab fa-github"></span> 
+                </a>
+              </span>
+              <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Sluit</button> -->
             </div>
           </div>
         </div>
