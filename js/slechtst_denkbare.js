@@ -74,31 +74,43 @@ function start() {
 	}
 	else // Try to load from file 
 	{
-		console.log("Found no local storage, trying to load from file.")
+		console.log("Found no local storage, trying to load from file.");
 		started_from_local_storage = false;
-		var txtFile = new XMLHttpRequest();
-		txtFile.open("GET", f_lines, true);
-		txtFile.onreadystatechange = function () {
-			if (txtFile.readyState === 4) // document is ready to parse.
-			{
-				if (txtFile.status === 200) // file is found
-				{
-					allText = txtFile.responseText;
-					lines = txtFile.responseText.split("\n");
-					n_lines = lines.length;
-					for (var i = 0; i < n_lines; i++) {
-						lines.push(lines[i].trim());
-					}
-					lines = lines.slice(1, n_lines - 1);
-					saveLinesToStorage();
-					welcome(); // only start welcome here, because ASYNC
-					return;
-				}
-			}
-		}
-		txtFile.send(null);
+		loadLines(function(loaded_lines) {
+			lines = loaded_lines
+			saveLinesToStorage();
+			updateStatus();
+			welcome(); // only start welcome here, because ASYNC
+		});
 	}
 }
+
+function loadLines(cb) {
+	var txtFile = new XMLHttpRequest();
+	var loaded_lines = [];
+	txtFile.open("GET", f_lines, true);
+	txtFile.onreadystatechange = function () {
+		if (txtFile.readyState === 4) // document is ready to parse.
+		{
+			if (txtFile.status === 200) // file is found
+			{
+				allText = txtFile.responseText;
+				var response = txtFile.responseText.split("\n");
+				loaded_lines.push.apply(loaded_lines, response);
+				n_lines = loaded_lines.length;
+				for (var i = 0; i < n_lines; i++) {
+					loaded_lines.push(loaded_lines[i].trim());
+				}
+				loaded_lines = loaded_lines.slice(1, n_lines - 1);
+				cb(loaded_lines);
+			}
+		}
+	}
+	txtFile.send(null);
+	return loaded_lines;
+}
+
+
 
 function printRandom() {
 	hideImage();
