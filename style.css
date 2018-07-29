@@ -40,7 +40,7 @@ body {
 }
 
 .suggestion-text-display { 
-	font-family: 'Raleway',sans-serif;
+	/*font-family: 'Raleway',sans-serif;*/
 	font-size: 3.6em;
 	font-weight: 800;
 	text-align: center;
