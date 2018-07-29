@@ -135,16 +135,6 @@ function welcome() {
 	updateStatus();
 }
 
-// Not used anymore because of reset cards
-function resetApp() {
-	localStorage.clear();
-	lines = [];
-	done_lines = [];
-	public_interval_counter = 1;
-	public_interval = 5;
-	start();
-}
-
 function resetCards() {
 	localStorage.removeItem("lines");
 	localStorage.removeItem("done_lines");
