@@ -94,10 +94,12 @@ function checkForNewLines() {
 		if (new_size !== old_size) {
 			// Remove all done_lines from loaded_lines
 			for (i=0; i<done_lines.length; i+=1) {
-				done_line = done_lines[i][0]; // TODO: Is it a bug that done_lines saves a list of lists of size 1?
+				done_line = done_lines[i];
+				if (done_line.constructor === Array) {
+					done_line = done_line[0];
+				}
 				index = loaded_lines.indexOf(done_line);
 				if (index > -1) {
-					console.log("Removing",done_line)
 					loaded_lines.splice(index, 1);
 				}
 			}
@@ -147,7 +149,8 @@ function printRandom() {
 		//if(splitted.length == 1 || splitted[1].isEmpty()){
 		show(splitted[0]);
 		//}else{show(splitted[0], splitted[1]);}
-		done_lines.push(lines.splice(id, 1));
+		var done_line = lines.splice(id, 1)[0];
+		done_lines.push(done_line);
 	}
 	else {
 		show("Slechtst denkbare ... (iets uit het publiek)");
