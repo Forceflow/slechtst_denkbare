@@ -199,3 +199,8 @@ $(window).keyup(function (e) {
 		printRandom();
 	}
 });
+
+// Make tooltips work
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
