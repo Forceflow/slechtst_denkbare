@@ -127,7 +127,7 @@ function updateStatus() {
 	var available = lines.length;
 	var status = available + "/" + total;
 	document.getElementById("status").innerHTML = status;
-	document.getElementById("interval").innerHTML = public_interval === 0 ? 'Geen publieksinput' : 'Om de ' + public_interval + ' suggesties';
+	document.getElementById("interval").innerHTML = (public_interval > 0 ? 'Om de ' + public_interval + ' suggesties': 'Geen publieksinput');
 }
 
 function welcome() {
