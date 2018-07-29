@@ -16,9 +16,10 @@ body {
 	height:100%;
 	font-size: 1.25em;
 }
+
 .footer {
 	width:100%;
-	height:100px;
+	height:180px;
 	position:absolute;
 	bottom:0;
 	left:0;
@@ -28,8 +29,8 @@ body {
 	text-align:center;
 	font-family:arial, helvetica, sans-serif;
 	line-height:1;
+	text-align: center;
 }
-
 .suggestion-display {
 	margin-top: 2em;
 }
@@ -40,11 +41,27 @@ body {
 
 .suggestion-text-display { 
 	font-family: 'Raleway',sans-serif;
-	font-size: 3.5em;
+	font-size: 3.6em;
 	font-weight: 800;
-	line-height: 110px;
-	margin: 0 0 24px;
 	text-align: center;
 	text-transform: uppercase;
 	overflow-wrap: break-word;
+}
+@media (max-width: 992px) {
+    .suggestion-text-display{font-size: 3.3em;}
+}
+@media (max-width: 768px) {
+    .suggestion-text-display{font-size: 2.7em;}
+}
+
+.button-container {
+	width: 100%;
+	text-align: center;
+	align-content: center;
+}
+
+.bottom-button {
+	font-size: 2.5em;
+	margin-left: .3em;
+	margin-right: .3em;
 }

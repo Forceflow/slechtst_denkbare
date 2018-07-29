@@ -12,6 +12,7 @@
     <title>Slechtst Denkbare SuggestieMachine</title>
 
     <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/fontawesome/css/all.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <script src="vendor/jquery/jquery-3.3.1.min.js"></script>
@@ -37,7 +38,7 @@
     </script>
   </head>
   <body onload="start()">
-    <div class="container" id="wrapper">
+    <div class="container-fluid" id="wrapper">
   	 <div class="row" align="center"></div>
     	<div class="suggestion-display col-md-12" id="thecontent" align="center">
         <h1 class="suggestion-text-display" id="content"></h1>
@@ -46,12 +47,19 @@
         </div>
     	</div>
 
-    	<div class="footer" align="center">
-  			<div align="center">
-          <button type="button" class="btn btn-primary btn-lg" onClick="printRandom()">Geef een nieuwe!</button>
-          <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#exampleModal">
-            Opties
-          </button>
+    	<div class="footer">
+  			<div class="container">
+          <div class="row button-container">
+            <div class="col-md-12">
+              <button type="button" class="btn btn-primary btn-lg bottom-button" onClick="printRandom()">
+                <span class="fas fa-sync"></span> 
+                <!-- <span class="fas fa-random"></span>  -->
+              </button>
+              <button type="button" class="btn btn-secondary btn-lg bottom-button" data-toggle="modal" data-target="#exampleModal">
+                <span class="fas fa-cogs"></span>
+              </button>
+            </div>
+          </div>
         </div>
   			
     	</div>
