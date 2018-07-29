@@ -48,12 +48,74 @@
 
     	<div class="footer" align="center">
   			<div align="center">
-          <div class="btn btn-primary" onClick="printRandom()">Geef een nieuwe!</div>
-          <div class="btn btn-primary" onClick="resetApp()">Reset</div>
-          <div class="btn btn-primary" onClick="setPublicInterval()">Set publiek interval</div>
+          <button type="button" class="btn btn-primary btn-lg" onClick="printRandom()">Geef een nieuwe!</button>
+          <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#exampleModal">
+            Opties
+          </button>
         </div>
-  			<div align="center"><p id="status">Status</p><p><a href="https://docs.google.com/forms/d/e/1FAIpQLSfMRoif8uh3CGwaXHmuRLflB6kYLQpwFVQp2WVeE8Y7cgVW3A/viewform?usp=sf_link" target="_blank">Suggest a card</a> - Made by Jeroen Baert <a href="https://github.com/Forceflow/slechtst_denkbare" target="_blank">(Github)</a></p></div>
+  			
     	</div>
+
+
+      <!-- Options Pane Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Opties</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+              <div class="container">
+                <div class="row">
+
+                  <!-- Gebruikte kaarten -->
+                  <div class="col-xs-12 col-md-8">
+                    <p id="status">Status</p>
+                  </div>
+                  <div class="col-xs-12 col-md-4">
+                    <button type="button" class="btn btn-primary btn-block" onClick="resetApp()">Reset gebruikte kaarten</button>
+                  </div>
+
+                  <!-- Publieksinterval -->
+                  <div class="col-xs-12 col-md-8">
+                    <p id="interval">Interval</p>
+                  </div>
+                  <div class="col-xs-12 col-md-2">
+                    <button type="button" class="btn btn-primary btn-block" onClick="setPublicInterval()">Zet publieksinterval</button>
+                  </div>
+                  <div align="center">
+                    <p>
+                      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfMRoif8uh3CGwaXHmuRLflB6kYLQpwFVQp2WVeE8Y7cgVW3A/viewform?usp=sf_link" target="_blank">
+                        Suggest a card
+                      </a>
+                    </p>
+                    <p>
+                      Made by Jeroen Baert
+                      <a href="https://github.com/Forceflow/slechtst_denkbare" target="_blank">
+                        (Github)
+                      </a>
+                    </p>
+                  </div>
+
+                </div>
+
+
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
     </div>
   </body>
 </html>

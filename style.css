@@ -14,6 +14,7 @@ body {
 html,
 body {
 	height:100%;
+	font-size: 1.25em;
 }
 .footer {
 	width:100%;
@@ -24,7 +25,6 @@ body {
 	font-weight:normal;
 	letter-spacing:1pt;
 	word-spacing:2pt;
-	font-size:.8em;
 	text-align:center;
 	font-family:arial, helvetica, sans-serif;
 	line-height:1;
@@ -40,7 +40,7 @@ body {
 
 .suggestion-text-display { 
 	font-family: 'Raleway',sans-serif;
-	font-size: 5em;
+	font-size: 3.5em;
 	font-weight: 800;
 	line-height: 110px;
 	margin: 0 0 24px;
