@@ -50,7 +50,7 @@
     	<div class="footer">
   			<div class="container">
           <div class="row button-container">
-            <div class="col-md-12">
+            <div class="col-12">
               <button type="button" class="btn btn-primary btn-lg bottom-button" onClick="printRandom()">
                 <span class="fas fa-random"></span> 
               </button>
@@ -81,26 +81,31 @@
                 <div class="row">
                   
                   <!-- Publieksinterval -->
-                  <h3 class="col-md-12">
+                  <h3 class="col-12">
                     Publieksinterval
                   </h3>
-                  <div class="col-md-8">
+                  <div class="col-6">
                     <p id="interval">Interval</p>
                   </div>
-                  <div class="col-md-4">
-                    <button type="button" class="btn btn-primary btn-block" onClick="setPublicInterval()">
-                      <span class="fas fa-wrench"></span> 
+                  <div class="col-3">
+                    <button type="button" class="btn btn-primary btn-block" onClick="decreasePublicInterval()">
+                      <span class="fas fa-minus"></span> 
+                    </button>
+                  </div>
+                  <div class="col-3">
+                    <button type="button" class="btn btn-primary btn-block" onClick="increasePublicInterval()">
+                      <span class="fas fa-plus"></span> 
                     </button>
                   </div>
 
                   <!-- Gebruikte kaarten -->
-                  <h3 class="col-md-12">
+                  <h3 class="col-12">
                     Ongebruikte kaarten
                   </h3>
-                  <div class="col-md-8">
+                  <div class="col-9">
                     <p id="status">Status</p>
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-3">
                     <button type="button" class="btn btn-primary btn-block" onClick="resetApp()">
                       <!-- Reset -->
                       <span class="fas fa-sync"></span> 

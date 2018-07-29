@@ -5,6 +5,7 @@ var done_lines = [];
 // Configure how often the public shoud be asked for input
 var public_interval_counter = 1; // put this to 0 to start with public input
 var public_interval = 5; // how many cards until public input
+var MAX_PUBLIC_INTERVAL = 30; // the maximum number of cards until public input
 
 var started_from_local_storage;
 
@@ -126,7 +127,7 @@ function updateStatus() {
 	var available = lines.length;
 	var status = available + "/" + total;
 	document.getElementById("status").innerHTML = status;
-	document.getElementById("interval").innerHTML = public_interval;
+	document.getElementById("interval").innerHTML = public_interval === 0 ? 'Geen publieksinput' : 'Om de ' + public_interval + ' suggesties';
 }
 
 function welcome() {
@@ -152,6 +153,28 @@ function setPublicInterval() {
 	}
 	console.log("Setting public interval to " + input_parsed);
 	public_interval = input_parsed;
+	updateStatus();
+	savePublicIntervalToStorage();
+}
+
+function getIntegerPublicInterval() {
+	value = parseInt(public_interval, 10);
+}
+
+function decreasePublicInterval() {
+	public_interval = parseInt(public_interval, 10) - 1;
+	if (public_interval < 0) {
+		public_interval = 0;
+	}
+	updateStatus();
+	savePublicIntervalToStorage();
+}
+
+function increasePublicInterval() {
+	public_interval = parseInt(public_interval, 10) + 1;
+	if (public_interval > MAX_PUBLIC_INTERVAL) {
+		public_interval = MAX_PUBLIC_INTERVAL;
+	}
 	updateStatus();
 	savePublicIntervalToStorage();
 }
