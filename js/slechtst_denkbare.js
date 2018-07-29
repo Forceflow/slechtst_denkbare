@@ -17,6 +17,10 @@ function saveLinesToStorage() {
 	localStorage["done_lines"] = JSON.stringify(done_lines);
 }
 
+function savePublicIntervalToStorage() {
+	localStorage["public_interval"] = public_interval;
+}
+
 function loadLinesFromStorage() {
 	if (localStorage["lines"] == null) {
 		return false;
@@ -26,6 +30,10 @@ function loadLinesFromStorage() {
 	}
 	lines = JSON.parse(localStorage["lines"]);
 	done_lines = JSON.parse(localStorage["done_lines"]);
+
+	if (typeof localStorage["public_interval"] !== 'undefined' && localStorage["public_interval"] !== null) {
+		public_interval = localStorage["public_interval"];
+	}
 	return true;
 }
 
@@ -117,9 +125,8 @@ function updateStatus() {
 	var total = lines.length + done_lines.length;
 	var available = lines.length;
 	var status = available + "/" + total;
-	var interval = public_interval;
 	document.getElementById("status").innerHTML = status;
-	document.getElementById("interval").innerHTML = interval;
+	document.getElementById("interval").innerHTML = public_interval;
 }
 
 function welcome() {
@@ -145,6 +152,8 @@ function setPublicInterval() {
 	}
 	console.log("Setting public interval to " + input_parsed);
 	public_interval = input_parsed;
+	updateStatus();
+	savePublicIntervalToStorage();
 }
 
 function error(text) {
