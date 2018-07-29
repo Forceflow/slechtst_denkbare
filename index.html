@@ -65,11 +65,11 @@
 
 
       <!-- Options Pane Modal -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
-            <div class="modal-header">
-              <h2 class="modal-title" id="exampleModalLabel">Opties</h2>
+            <div class="modal-header options-modal-header">
+              <h2 class="modal-title">Opties</h2>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -84,49 +84,32 @@
                   <h3 class="col-12">
                     Publieksinterval
                   </h3>
-                  <div class="col-6">
+                  <div class="col-8">
                     <p id="interval">Interval</p>
                   </div>
-                  <div class="col-3">
-                    <button type="button" class="btn btn-primary btn-block" onClick="decreasePublicInterval()">
-                      <span class="fas fa-minus"></span> 
-                    </button>
-                  </div>
-                  <div class="col-3">
-                    <button type="button" class="btn btn-primary btn-block" onClick="increasePublicInterval()">
-                      <span class="fas fa-plus"></span> 
-                    </button>
-                  </div>
+                  <button type="button" class="col-2 btn btn-primary btn-interval" onClick="decreasePublicInterval()">
+                    <span class="fas fa-minus"></span> 
+                  </button>
+                  <button type="button" class="col-2 btn btn-primary btn-interval" onClick="increasePublicInterval()">
+                    <span class="fas fa-plus"></span> 
+                  </button>
 
                   <!-- Gebruikte kaarten -->
                   <h3 class="col-12">
                     Ongebruikte kaarten
                   </h3>
-                  <div class="col-9">
+                  <div class="col-8">
                     <p id="status">Status</p>
                   </div>
-                  <div class="col-3">
-                    <button type="button" class="btn btn-primary btn-block" onClick="resetCards()">
+                    <button type="button" class="col-2 btn btn-primary" onClick="resetCards()">
                       <!-- Reset -->
                       <span class="fas fa-sync"></span> 
                     </button>
-                  </div>
+                    <a class="col-2 btn btn-primary" data-trigger="hover" title="test" href="https://docs.google.com/forms/d/e/1FAIpQLSfMRoif8uh3CGwaXHmuRLflB6kYLQpwFVQp2WVeE8Y7cgVW3A/viewform?usp=sf_link" target="_blank">
+                      <span class="fas fa-lightbulb"></span> 
 
-
-                  <!-- Informatie -->
-                  <div class="col-md-12">
-                    <p>
-                      <a class="btn btn-primary btn-block" href="https://docs.google.com/forms/d/e/1FAIpQLSfMRoif8uh3CGwaXHmuRLflB6kYLQpwFVQp2WVeE8Y7cgVW3A/viewform?usp=sf_link" target="_blank">
-                        Suggereer een kaart
-                      </a>
-                    </p>
-                    <p>
-                      Made by Jeroen Baert
-                      <a href="https://github.com/Forceflow/slechtst_denkbare" target="_blank">
-                        (Github)
-                      </a>
-                    </p>
-                  </div>
+                      <!-- Suggereer een kaart -->
+                    </a>
 
                 </div>
 
@@ -135,7 +118,13 @@
 
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Sluit</button>
+                  <span class="credits">
+                    Made by Jeroen Baert
+                    <a class="btn btn-secondary btn-sm" href="https://github.com/Forceflow/slechtst_denkbare" target="_blank">
+                      <span class="fab fa-github"></span> 
+                    </a>
+                  </span>
+                  <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Sluit</button> -->
             </div>
           </div>
         </div>

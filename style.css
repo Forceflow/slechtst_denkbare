@@ -65,3 +65,13 @@ body {
 	margin-left: .3em;
 	margin-right: .3em;
 }
+
+.credits {
+	font-size: .9em;
+	color: #bbb;
+}
+
+.options-modal-header {
+	padding-bottom: .3em;
+    padding-top: .3em;
+}

@@ -135,7 +135,7 @@ function welcome() {
 	updateStatus();
 }
 
-// Not used anymore?
+// Not used anymore because of reset cards
 function resetApp() {
 	localStorage.clear();
 	lines = [];
