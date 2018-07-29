@@ -69,6 +69,7 @@ function start() {
 	if (loadLinesFromStorage()) {
 		console.log("Found local storage.")
 		started_from_local_storage = true;
+		checkForNewLines();
 		welcome();
 		return;
 	}
@@ -83,6 +84,28 @@ function start() {
 			welcome(); // only start welcome here, because ASYNC
 		});
 	}
+}
+
+function checkForNewLines() {
+	loadLines(function(loaded_lines) {
+		var i, index, done_line
+			new_size = loaded_lines.length,
+			old_size = lines.length + done_lines.length;
+		if (new_size !== old_size) {
+			// Remove all done_lines from loaded_lines
+			for (i=0; i<done_lines.length; i+=1) {
+				done_line = done_lines[i][0]; // TODO: Is it a bug that done_lines saves a list of lists of size 1?
+				index = loaded_lines.indexOf(done_line);
+				if (index > -1) {
+					console.log("Removing",done_line)
+					loaded_lines.splice(index, 1);
+				}
+			}
+			lines = loaded_lines;
+			updateStatus();
+			saveLinesToStorage();
+		}
+	});
 }
 
 function loadLines(cb) {
@@ -156,6 +179,7 @@ function resetCards() {
 	start();
 }
 
+// Unused due to interface change to +/- buttons.
 function setPublicInterval() {
 	var input = prompt("Hoeveel items tussen elke vraag voor publieksinput?", public_interval);
 	var input_parsed = parseInt(input, 10);
