@@ -18,18 +18,9 @@ body {
 }
 
 .footer {
-	width:100%;
-	height:150px;
-	position:absolute;
-	bottom:0;
-	left:0;
-	font-weight:normal;
-	letter-spacing:1pt;
-	word-spacing:2pt;
-	text-align:center;
-	font-family:arial, helvetica, sans-serif;
-	line-height:1;
-	text-align: center;
+	margin-bottom:.5em;
+	margin-left:.5em;
+	margin-right:.5em;
 }
 .suggestion-display {
 	margin-top: 2em;
