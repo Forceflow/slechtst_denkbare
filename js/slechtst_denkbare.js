@@ -68,6 +68,13 @@ function setIsGenerating(new_value) {
 	}
 }
 
+function showLine(input_line) {
+	var splitted = input_line.split("$");
+	//if(splitted.length == 1 || splitted[1].isEmpty()){
+	show(splitted[0]);
+	//}else{show(splitted[0], splitted[1]);}
+}
+
 function show(text, image) {
 	setIsGenerating(true);
 	document.getElementById("content").innerHTML = text;
@@ -165,10 +172,7 @@ function printRandom() {
 			return;
 		}
 		var id = Math.floor(Math.random() * lines.length);
-		var splitted = lines[id].split("$");
-		//if(splitted.length == 1 || splitted[1].isEmpty()){
-		show(splitted[0]);
-		//}else{show(splitted[0], splitted[1]);}
+		showLine(lines[id]);
 		var done_line = lines.splice(id, 1)[0];
 		done_lines.push(done_line);
 	}
@@ -189,7 +193,12 @@ function updateStatus() {
 }
 
 function welcome() {
-	show("Slechtst Denkbare App");
+	var first_line = "Slechtst Denkbare App",
+		done_line_size = done_lines.length;
+	if (done_line_size > 0) {
+		first_line = done_lines[done_line_size-1];
+	}
+	showLine(first_line);
 	updateStatus();
 }
 
