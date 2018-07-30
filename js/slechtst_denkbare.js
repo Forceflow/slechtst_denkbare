@@ -68,19 +68,13 @@ function setIsGenerating(new_value) {
 	}
 }
 
-function show(text) {
-	setIsGenerating(true);
-	document.getElementById("content").innerHTML = text;
-	$("#content").shuffleLetters({ callback: function() {
-		setIsGenerating(false);
-	}});
-}
-
 function show(text, image) {
 	setIsGenerating(true);
 	document.getElementById("content").innerHTML = text;
 	$("#content").shuffleLetters({ callback: function () {
-		showimage(image);
+		if (image) {
+			showimage(image);
+		}
 		setIsGenerating(false);
 	}});
 }
