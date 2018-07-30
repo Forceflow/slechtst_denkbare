@@ -61,8 +61,10 @@ function setIsGenerating(new_value) {
 	var generator_button_icon = document.getElementById("generator-button-icon");
 	if (is_generating) {
 		generator_button.classList.add("disabled");
+		generator_button_icon.classList.add("fa-spin");
 	} else {
 		generator_button.classList.remove("disabled");
+		generator_button_icon.classList.remove("fa-spin");
 	}
 }
 

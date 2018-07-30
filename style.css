@@ -48,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
     .suggestion-text-display{font-size: 1.9em;}
 }
 @media (max-width: 350px) {
-    .suggestion-text-display{font-size: 1.4em;}
+    .suggestion-text-display{font-size: 1.3em;}
 }
 .bottom-button {
 	font-size: 2.5em;
