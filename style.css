@@ -1,55 +1,76 @@
-html { 
-  background: url(img/joker_wallpaper.png) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+html,
+body { 
+	background-image: url("img/joker_wallpaper.png");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center, center; 
+	background-size: cover;
+	background-color: #f8f8f8;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
 }
 
 html,
 body {
-	margin:0;
-	padding:0;
 	height:100%;
-}
-#wrapper {
-	min-height:100%;
-	position:relative;
-}
-#header {
-	padding:10px;
-}
-#thecontent {
-	padding-bottom:100px; /* Height of the footer element */
-	padding-left:30px;
-	padding-right:30px;
-}
-#footer {
-	width:100%;
-	height:100px;
-	position:absolute;
-	bottom:0;
-	left:0;
-	font-weight:normal;
-	letter-spacing:1pt;
-	word-spacing:2pt;
-	font-size:11px;
-	text-align:center;
-	font-family:arial, helvetica, sans-serif;
-	line-height:1;
+	font-size: 1.25em;
 }
 
-#image{
+.footer {
+	margin-bottom:.5em;
+	margin-left:.5em;
+	margin-right:.5em;
+}
+.suggestion-display {
+	margin-top: 2em;
+}
+
+.suggestion-image-display {
 	display:none;
 }
 
-#content { 
+h1, h2, h3, h4, h5, h6 {
 	font-family: 'Raleway',sans-serif;
-	font-size: 100px;
 	font-weight: 800;
-	line-height: 110px;
-	margin: 0 0 24px;
+}
+
+.suggestion-text-display { 
+	font-size: 3.6em;
 	text-align: center;
 	text-transform: uppercase;
 	overflow-wrap: break-word;
+}
+@media (max-width: 992px) {
+    .suggestion-text-display{font-size: 3em;}
+}
+@media (max-width: 768px) {
+    .suggestion-text-display{font-size: 2.1em;}
+}
+@media (max-width: 450px) {
+    .suggestion-text-display{font-size: 1.8em;}
+}
+@media (max-width: 350px) {
+    .suggestion-text-display{font-size: 1.4em;}
+}
+.bottom-button {
+	font-size: 2.5em;
+}
+@media (max-width: 768px) {
+	.bottom-button {
+		font-size: 1.3em;
+	}
+}
+
+.credits {
+	font-size: .8em;
+	color: #bbb;
+}
+
+.options-modal-header {
+	padding-bottom: .3em;
+    padding-top: .3em;
+}
+.options-modal-footer {
+	padding: .2rem;
 }

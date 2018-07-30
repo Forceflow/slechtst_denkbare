@@ -5,8 +5,11 @@ var done_lines = [];
 // Configure how often the public shoud be asked for input
 var public_interval_counter = 1; // put this to 0 to start with public input
 var public_interval = 5; // how many cards until public input
+var MAX_PUBLIC_INTERVAL = 30; // the maximum number of cards until public input
 
 var started_from_local_storage;
+
+var is_generating = false;
 
 String.prototype.isEmpty = function () {
 	return (this.length === 0 || !this.trim());
@@ -15,6 +18,10 @@ String.prototype.isEmpty = function () {
 function saveLinesToStorage() {
 	localStorage["lines"] = JSON.stringify(lines);
 	localStorage["done_lines"] = JSON.stringify(done_lines);
+}
+
+function savePublicIntervalToStorage() {
+	localStorage["public_interval"] = public_interval;
 }
 
 function loadLinesFromStorage() {
@@ -26,6 +33,10 @@ function loadLinesFromStorage() {
 	}
 	lines = JSON.parse(localStorage["lines"]);
 	done_lines = JSON.parse(localStorage["done_lines"]);
+
+	if (typeof localStorage["public_interval"] !== 'undefined' && localStorage["public_interval"] !== null) {
+		public_interval = localStorage["public_interval"];
+	}
 	return true;
 }
 
@@ -44,14 +55,35 @@ function showimage(url) {
 	}
 }
 
-function show(text) {
-	document.getElementById("content").innerHTML = text;
-	$("#content").shuffleLetters();
+function setIsGenerating(new_value) {
+	is_generating = new_value;
+	var generator_button = document.getElementById("generator-button");
+	var generator_button_icon = document.getElementById("generator-button-icon");
+	if (is_generating) {
+		generator_button.classList.add("disabled");
+		generator_button_icon.classList.add("fa-spin");
+	} else {
+		generator_button.classList.remove("disabled");
+		generator_button_icon.classList.remove("fa-spin");
+	}
+}
+
+function showLine(input_line) {
+	var splitted = input_line.split("$");
+	//if(splitted.length == 1 || splitted[1].isEmpty()){
+	show(splitted[0]);
+	//}else{show(splitted[0], splitted[1]);}
 }
 
 function show(text, image) {
+	setIsGenerating(true);
 	document.getElementById("content").innerHTML = text;
-	$("#content").shuffleLetters({ callback: function () { showimage(image); } });
+	$("#content").shuffleLetters({ callback: function () {
+		if (image) {
+			showimage(image);
+		}
+		setIsGenerating(false);
+	}});
 }
 
 function start() {
@@ -60,38 +92,79 @@ function start() {
 	if (loadLinesFromStorage()) {
 		console.log("Found local storage.")
 		started_from_local_storage = true;
+		checkForNewLines();
 		welcome();
 		return;
 	}
 	else // Try to load from file 
 	{
-		console.log("Found no local storage, trying to load from file.")
+		console.log("Found no local storage, trying to load from file.");
 		started_from_local_storage = false;
-		var txtFile = new XMLHttpRequest();
-		txtFile.open("GET", f_lines, true);
-		txtFile.onreadystatechange = function () {
-			if (txtFile.readyState === 4) // document is ready to parse.
-			{
-				if (txtFile.status === 200) // file is found
-				{
-					allText = txtFile.responseText;
-					lines = txtFile.responseText.split("\n");
-					n_lines = lines.length;
-					for (var i = 0; i < n_lines; i++) {
-						lines.push(lines[i].trim());
-					}
-					lines = lines.slice(1, n_lines - 1);
-					saveLinesToStorage();
-					welcome(); // only start welcome here, because ASYNC
-					return;
-				}
-			}
-		}
-		txtFile.send(null);
+		loadLines(function(loaded_lines) {
+			lines = loaded_lines
+			saveLinesToStorage();
+			updateStatus();
+			welcome(); // only start welcome here, because ASYNC
+		});
 	}
 }
 
+function checkForNewLines() {
+	loadLines(function(loaded_lines) {
+		var i, index, done_line
+			new_size = loaded_lines.length,
+			old_size = lines.length + done_lines.length;
+		if (new_size !== old_size) {
+			// Remove all done_lines from loaded_lines
+			for (i=0; i<done_lines.length; i+=1) {
+				done_line = done_lines[i];
+				if (done_line.constructor === Array) {
+					done_line = done_line[0];
+				}
+				index = loaded_lines.indexOf(done_line);
+				if (index > -1) {
+					loaded_lines.splice(index, 1);
+				}
+			}
+			lines = loaded_lines;
+			updateStatus();
+			saveLinesToStorage();
+		}
+	});
+}
+
+function loadLines(cb) {
+	var txtFile = new XMLHttpRequest();
+	var loaded_lines = [];
+	txtFile.open("GET", f_lines, true);
+	txtFile.onreadystatechange = function () {
+		if (txtFile.readyState === 4) // document is ready to parse.
+		{
+			if (txtFile.status === 200) // file is found
+			{
+				allText = txtFile.responseText;
+				var response = txtFile.responseText.split("\n");
+				loaded_lines.push.apply(loaded_lines, response);
+				n_lines = loaded_lines.length;
+				for (var i = 0; i < n_lines; i++) {
+					loaded_lines.push(loaded_lines[i].trim());
+				}
+				loaded_lines = loaded_lines.slice(1, n_lines - 1);
+				cb(loaded_lines);
+			}
+		}
+	}
+	txtFile.send(null);
+	return loaded_lines;
+}
+
+
+
 function printRandom() {
+	if (is_generating) {
+		console.log("ALREADY GENERATING!")
+		return;
+	}
 	hideImage();
 	if (public_interval_counter % public_interval != 0) {
 		if (lines.length == 0) {
@@ -99,11 +172,9 @@ function printRandom() {
 			return;
 		}
 		var id = Math.floor(Math.random() * lines.length);
-		var splitted = lines[id].split("$");
-		//if(splitted.length == 1 || splitted[1].isEmpty()){
-		show(splitted[0]);
-		//}else{show(splitted[0], splitted[1]);}
-		done_lines.push(lines.splice(id, 1));
+		showLine(lines[id]);
+		var done_line = lines.splice(id, 1)[0];
+		done_lines.push(done_line);
 	}
 	else {
 		show("Slechtst denkbare ... (iets uit het publiek)");
@@ -116,25 +187,31 @@ function printRandom() {
 function updateStatus() {
 	var total = lines.length + done_lines.length;
 	var available = lines.length;
-	var status = "Cards:" + available + "/" + total + " - ";
-	status += "Interval:" + public_interval;
+	var status = available + "/" + total;
 	document.getElementById("status").innerHTML = status;
+	document.getElementById("interval").innerHTML = (public_interval > 0 ? 'Om de ' + public_interval + ' suggesties': 'Geen publieksinput');
 }
 
 function welcome() {
-	show("Slechtst Denkbare App");
+	var first_line = "Slechtst Denkbare App",
+		done_line_size = done_lines.length;
+	if (done_line_size > 0) {
+		first_line = done_lines[done_line_size-1];
+	}
+	showLine(first_line);
 	updateStatus();
 }
 
-function resetApp() {
-	localStorage.clear();
+function resetCards() {
+	localStorage.removeItem("lines");
+	localStorage.removeItem("done_lines");
 	lines = [];
 	done_lines = [];
 	public_interval_counter = 1;
-	public_interval = 5;
 	start();
 }
 
+// Unused due to interface change to +/- buttons.
 function setPublicInterval() {
 	var input = prompt("Hoeveel items tussen elke vraag voor publieksinput?", public_interval);
 	var input_parsed = parseInt(input, 10);
@@ -144,6 +221,31 @@ function setPublicInterval() {
 	}
 	console.log("Setting public interval to " + input_parsed);
 	public_interval = input_parsed;
+	updateStatus();
+	savePublicIntervalToStorage();
+}
+
+function getIntegerPublicInterval() {
+	var value = parseInt(public_interval, 10);
+	return value;
+}
+
+function decreasePublicInterval() {
+	public_interval = getIntegerPublicInterval() - 1;
+	if (public_interval < 0) {
+		public_interval = 0;
+	}
+	updateStatus();
+	savePublicIntervalToStorage();
+}
+
+function increasePublicInterval() {
+	public_interval = getIntegerPublicInterval() + 1;
+	if (public_interval > MAX_PUBLIC_INTERVAL) {
+		public_interval = MAX_PUBLIC_INTERVAL;
+	}
+	updateStatus();
+	savePublicIntervalToStorage();
 }
 
 function error(text) {
@@ -156,3 +258,8 @@ $(window).keyup(function (e) {
 		printRandom();
 	}
 });
+
+// Make tooltips work
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
