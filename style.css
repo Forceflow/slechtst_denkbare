@@ -45,10 +45,13 @@ h1, h2, h3, h4, h5, h6 {
     .suggestion-text-display{font-size: 3em;}
 }
 @media (max-width: 768px) {
-    .suggestion-text-display{font-size: 1.9em;}
+    .suggestion-text-display{font-size: 2.1em;}
+}
+@media (max-width: 450px) {
+    .suggestion-text-display{font-size: 1.8em;}
 }
 @media (max-width: 350px) {
-    .suggestion-text-display{font-size: 1.3em;}
+    .suggestion-text-display{font-size: 1.4em;}
 }
 .bottom-button {
 	font-size: 2.5em;
