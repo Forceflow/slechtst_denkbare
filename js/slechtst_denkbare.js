@@ -9,6 +9,8 @@ var MAX_PUBLIC_INTERVAL = 30; // the maximum number of cards until public input
 
 var started_from_local_storage;
 
+var is_generating = false;
+
 String.prototype.isEmpty = function () {
 	return (this.length === 0 || !this.trim());
 };
@@ -53,14 +55,32 @@ function showimage(url) {
 	}
 }
 
+function setIsGenerating(new_value) {
+	is_generating = new_value;
+	var generator_button = document.getElementById("generator-button");
+	var generator_button_icon = document.getElementById("generator-button-icon");
+	if (is_generating) {
+		generator_button.classList.add("disabled");
+	} else {
+		generator_button.classList.remove("disabled");
+	}
+}
+
 function show(text) {
+	setIsGenerating(true);
 	document.getElementById("content").innerHTML = text;
-	$("#content").shuffleLetters();
+	$("#content").shuffleLetters({ callback: function() {
+		setIsGenerating(false);
+	}});
 }
 
 function show(text, image) {
+	setIsGenerating(true);
 	document.getElementById("content").innerHTML = text;
-	$("#content").shuffleLetters({ callback: function () { showimage(image); } });
+	$("#content").shuffleLetters({ callback: function () {
+		showimage(image);
+		setIsGenerating(false);
+	}});
 }
 
 function start() {
@@ -138,6 +158,10 @@ function loadLines(cb) {
 
 
 function printRandom() {
+	if (is_generating) {
+		console.log("ALREADY GENERATING!")
+		return;
+	}
 	hideImage();
 	if (public_interval_counter % public_interval != 0) {
 		if (lines.length == 0) {
