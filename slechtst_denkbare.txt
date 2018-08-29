@@ -30,7 +30,7 @@ Dingen die je niet gauw zal horen in een interview met een profvoetballer$
 Dingen die je niet gauw zal horen op het History Channel$
 Dingen die je niet gauw zal horen in een bordeel$
 Dingen die je niet gauw zal horen bij het Vaticaans Concilie$
-Dingen die je niet gauw zal horen op een rockfestival$
+Dingen die je niet gauw zal horen op een festival$
 Dingen die je niet gauw zal horen in een backstage$
 Dingen die je niet gauw zal horen in/bij een illegale boksmatch$
 Dingen die je niet gauw zal horen bij een drugsdeal$
@@ -309,4 +309,8 @@ Slechtst denkbare eerste woorden van je baby$
 Slechtst denkbare wensen voor een geest uit een lamp$
 Fout herinnerde movie quotes$
 Slechtst denkbare lijkschouwer$
+Slechtst denkbare ambulancier$
+Slechtst denkbare cipier$
+Slechtst denkbare bloemist$
+Slechtst denkbare butler$
 </slechtst_denkbare>
