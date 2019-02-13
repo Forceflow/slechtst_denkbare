@@ -1,4 +1,4 @@
-<slechtst_denkbare>
+﻿<slechtst_denkbare>
 Dingen die je niet gauw zal horen in een vliegtuig$
 Dingen die je niet gauw zal horen in een OCMW kantoor$
 Dingen die je niet gauw zal horen op het journaal$
@@ -313,4 +313,8 @@ Slechtst denkbare ambulancier$
 Slechtst denkbare cipier$
 Slechtst denkbare bloemist$
 Slechtst denkbare butler$
+Slechtst denkbare zoekertje$
+Slechtst denkbare scoutsbadge$
+Slechtst denkbare toevoeging aan de 10 geboden$
+Slechtst denkbare manier om slecht nieuws te brengen$
 </slechtst_denkbare>
