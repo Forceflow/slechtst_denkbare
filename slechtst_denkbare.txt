@@ -155,7 +155,6 @@ Slechtst Denkbare Vampier$
 Slechtst Denkbare Paus$paus.jpg
 Slechtst Denkbare Sportcommentator$
 Slechtst Denkbare Nieuwsanker$
-Slechtst Denkbare Touroperator$
 Slechtst Denkbare Marketeer$
 Slechtst Denkbare Operazanger$opera.jpg
 Slechtst Denkbare Cameraman$
@@ -242,13 +241,11 @@ Het antwoord is 'De placenta, natuurlijk!' Wat is de vraag?$
 Het antwoord is 'In een pak boter' Wat is de vraag?$
 Dingen die je niet gauw zal horen in het Witte Huis$
 Dingen die je best niet zegt op je eerste dag in het leger$
-Dingen die je niet gauw zal horen op het journaal$
 Dingen die je niet gauw zal horen op de uitreiking van de oscars$
 Slechtst denkbare manier om te helpen in een crisissituatie$
 Slechtst denkbare dingen om te zeggen in een rechtszaak$
 Dingen die je niet gauw zal horen in een Bond-film$
 Slechtst denkbare rij-examen$
-Dingen die je niet gauw zal horen in een wetenschapsprogramma$
 Dingen die je niet gauw zal zien op een verkeersbord$
 Dingen die je niet gauw zal horen op een quiz$
 Dingen die de sfeer bij een maaltijd meteen doen omslaan$
@@ -317,4 +314,16 @@ Slechtst denkbare zoekertje$
 Slechtst denkbare scoutsbadge$
 Slechtst denkbare toevoeging aan de 10 geboden$
 Slechtst denkbare manier om slecht nieuws te brengen$
+Slechtst Denkbare digitaal assistent (Siri, Alexa, ...)$
+Dingen die je kan zeggen over je auto, maar niet over je vriend/vriendin$
+Slechtst denkbare gast op een Comic-Con$
+Slechtst denkbare manier om je ecologische voetafdruk te beperken$
+Slechtst denkbare manier om iets nieuws te ontdekken$
+Slechtst denkbare hacker$
+Dingen die je niet vaak zal horen in de Lego-fabriek$
+Beste nerdy verleidings-zinnen$
+Dingen die je niet gauw zal horen bij het bloed geven$
+Slechtst denkbare nieuwe iPhone-feature$
+Slechtst denkbare oplossing bij of tegen overstromingen$
+De minder succesvolle uitvindingen van Leonardo Da Vinci$
 </slechtst_denkbare>
