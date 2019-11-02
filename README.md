@@ -1,5 +1,5 @@
 # De Slechtst Denkbare App
-"Slechtst Denkbare" improv game display app
+A "Slechtst Denkbare" improv game display app
 
 A little web app that was originally developed for showing suggestions at our "World's Worst" improv show at [Cafe The Joker](http://www.cafethejoker.be/) in september 2015, but is now used for training and performing quick-fire improv games in the style of "Lines You Wouldn't Hear" or "Worst possible <profession>". 
 
