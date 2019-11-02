@@ -5,6 +5,7 @@ A little web app that was originally developed for showing suggestions at our "W
 
 * For performances, you can configure how often the audience should be involved in making a suggestion. (Every X cards).
 * Thanks to [Twinters](https://github.com/twinters), the app is now a mobile-compatible web app you can add to your home screen.
+* Suggestions for content to be added can be made using [this form](https://docs.google.com/forms/d/e/1FAIpQLSfMRoif8uh3CGwaXHmuRLflB6kYLQpwFVQp2WVeE8Y7cgVW3A/viewform).
 
 Latest version from master branch always live at **www.slechtstdenkbare.be**
 
