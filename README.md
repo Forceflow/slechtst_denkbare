@@ -11,6 +11,7 @@ A little web app that was originally developed for showing suggestions at our _"
 ## Thanks
 We would like to thank our sponsors for covering our hosting and URL costs:
 * [Friends Of Comedy](https://friendsofcomedy.webs.com/)
+* All individual donors
 
 ## As seen in/on:
 On some occasions, the app has been used with a live audience. You might have seen it. Drop us a line at slechtstdenkbare(at)jeroen-baert.be if you use it in your show!
