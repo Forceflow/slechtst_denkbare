@@ -1,3 +1,4 @@
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/Forceflow)
 # De Slechtst Denkbare App
 A "Slechtst Denkbare" improv game display app - live at **www.slechtstdenkbare.be**
 
@@ -9,7 +10,7 @@ A little web app that was originally developed for showing suggestions at our _"
 * Suggestions for content to be added can be made using [this form](https://docs.google.com/forms/d/e/1FAIpQLSfMRoif8uh3CGwaXHmuRLflB6kYLQpwFVQp2WVeE8Y7cgVW3A/viewform).
 
 ## Thanks
-We would like to thank our sponsors for covering our hosting and URL costs:
+We would like to thank our sponsors for covering our hosting and URL costs. If you use the app in your improv team or for a performance, please consider [**donating**](https://www.paypal.me/Forceflow) to help.
 * [Friends Of Comedy](https://friendsofcomedy.webs.com/)
 * All individual donors
 
